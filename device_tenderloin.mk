@@ -175,7 +175,7 @@ PRODUCT_COPY_FILES += \
     device/hp/tenderloin/media_profiles.xml:/system/etc/media_profiles.xml \
     device/hp/tenderloin/vold.fstab:system/etc/vold.fstab \
     device/hp/tenderloin/makemulti.sh:makemulti.sh \
-    device/hp/tenderloin/prebuilt/boot/moboot.splash.CyanogenMod.tga:moboot.splash.CyanogenMod.tga
+    device/hp/tenderloin/prebuilt/boot/moboot.splash.AOKP.tga:moboot.splash.AOKP.tga
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := device/hp/tenderloin/prebuilt/boot/kernel
