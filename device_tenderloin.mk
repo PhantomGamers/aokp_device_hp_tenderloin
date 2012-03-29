@@ -171,6 +171,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # device uses high-density artwork where available
 PRODUCT_LOCALES += en_US mdpi
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.secure=0
+
 PRODUCT_COPY_FILES += \
     device/hp/tenderloin/media_profiles.xml:/system/etc/media_profiles.xml \
     device/hp/tenderloin/vold.fstab:system/etc/vold.fstab \
