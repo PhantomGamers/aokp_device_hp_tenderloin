@@ -111,7 +111,8 @@ PRODUCT_PACKAGES += \
     serial \
     com.android.future.usb.accessory \
     rebootcmd \
-    TenderloinParts
+    TenderloinParts \
+    Launcher2
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
