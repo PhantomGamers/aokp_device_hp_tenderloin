@@ -97,9 +97,9 @@ def WriteFullOTAPackage(input_zip, output_zip):
   # -- tenderloin build change done
   script.ShowProgress(0.2, 0)
 
-  if OPTIONS.backuptool:
-    script.ShowProgress(0.2, 10)
-    script.RunBackup("restore")
+  #if OPTIONS.backuptool:
+    #script.ShowProgress(0.2, 10)
+    #script.RunBackup("restore")
 
 #  script.RunVerifyCachePartitionSize()
 
