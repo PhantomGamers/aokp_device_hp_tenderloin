@@ -69,7 +69,7 @@ int Lsm303dlhMagSensor::enable(int32_t handle, int en)
         err = -errno;
     }
 
-    ALOGE_IF(err < 0, "Error setting enable of LSM303DLH magnetometer (%s)"
+    LOGE_IF(err < 0, "Error setting enable of LSM303DLH magnetometer (%s)"
             , strerror(-err));
 
     if (!err) {
@@ -101,7 +101,7 @@ int Lsm303dlhMagSensor::setDelay(int32_t handle, int64_t ns)
             err = -errno;
         }
 
-        ALOGE_IF(err < 0,
+        LOGE_IF(err < 0,
                 "Error setting delay of LSM303DLH magnetometer (%s)",
                 strerror(-err)); } 
     return err;
@@ -129,7 +129,7 @@ int Lsm303dlhMagSensor::readEvents(sensors_event_t* data, int count)
             count--;
             numEventReceived++;
         } else {
-            ALOGE("LSM303DLH_MAG: unknown event (type=%d, code=%d)",
+            LOGE("LSM303DLH_MAG: unknown event (type=%d, code=%d)",
                     type, event->code);
         }
         mInputReader.next();
@@ -163,12 +163,12 @@ int Lsm303dlhMagSensor::isEnabled()
         if(amt > 0) {
             return (buffer[0] == '1');
         } else {
-            ALOGE("LSM303DLH_MAG: isEnable() failed to read (%s)",
+            LOGE("LSM303DLH_MAG: isEnable() failed to read (%s)",
                     strerror(errno));
             return 0;
         }
     } else {
-        ALOGE("LSM303DLH_MAG: isEnabled failed to open %s",
+        LOGE("LSM303DLH_MAG: isEnabled failed to open %s",
                 LSM303DLH_MAG_ENABLE_FILE);
         return 0;
     }
