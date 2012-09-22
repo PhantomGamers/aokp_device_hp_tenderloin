@@ -29,12 +29,12 @@ int device_handle_key(int key_code, int visible) {
                 return SELECT_ITEM;
 
             case KEY_POWER:   // long press power
-                if (ui_menu_level > 0) {
+                if (ui_get_showing_back_button()) {
                     return GO_BACK;
                 }
 
             case KEY_END:    // short press power
-                if (ui_menu_level > 0) {
+                if (ui_get_showing_back_button()) {
                     return GO_BACK;
                 }
         }
