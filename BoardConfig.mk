@@ -7,7 +7,7 @@ TARGET_SPECIFIC_HEADER_PATH := device/hp/tenderloin/include
 TARGET_USES_2G_VM_SPLIT := true
 
 TARGET_NO_BOOTLOADER := true
-TARGET_NO_KERNEL := true
+TARGET_NO_KERNEL := false
 
 TARGET_BOOTLOADER_BOARD_NAME := tenderloin
 TARGET_BOARD_PLATFORM := msm8660
@@ -90,8 +90,8 @@ TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := device/hp/tenderloin/releasetools/tenderloin_img_from_target_files
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/hp/tenderloin/releasetools/tenderloin_ota_from_target_files
 
-BOARD_USES_UBOOT := true
-BOARD_USES_UBOOT_MULTIIMAGE := true
+BOARD_USES_UBOOT := false
+BOARD_USES_UBOOT_MULTIIMAGE := false
 
 # use dosfsck from dosfstools
 BOARD_USES_CUSTOM_FSCK_MSDOS := true
@@ -119,7 +119,7 @@ BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_CUSTOM_GRAPHICS:= ../../../device/hp/tenderloin/graphics.c
-BOARD_CUSTOM_BOOTIMG_MK := device/hp/tenderloin/uboot-bootimg.mk
+#BOARD_CUSTOM_BOOTIMG_MK := device/hp/tenderloin/uboot-bootimg.mk
 
 # Multiboot stuff
 TARGET_RECOVERY_PRE_COMMAND := "/system/bin/rebootcmd"
